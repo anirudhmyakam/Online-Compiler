@@ -1,0 +1,49 @@
+
+<div class="top-bar">
+    <select class="language" name="language" [(ngModel)]="language" (change)="changesonLanguage(language)">
+        <option class="options" selected value="python">Python</option>
+        <option class="options" value="java">Java</option>
+    </select>
+
+    <input class="filename" type="text" name="filename" [(ngModel)]="fileName">
+
+    <button class="run-button" (click)="run()" >Run</button>
+    <!-- <button>download</button>
+    <button>Settings</button> -->
+
+</div>
+
+
+<div class="whole-ide">
+@if (isBrowser){
+    <div class="ide-div"> <ngx-monaco-editor class="code-ide" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor> </div>
+}
+
+<div>
+    <div class="terminal-options">
+        <p (click)="setTerminal(true)">Terminal</p>
+        <p (click)="setTerminal(false)">Test Case</p>
+    </div>
+    
+    @if(isTerminal){
+        <div class="terminal"><app-terminal></app-terminal></div>
+    }
+
+    @if(!isTerminal){
+        <div class="test-case">
+            <div class="test-case-switch"> <p (click)="setDisplayOutput(false)">Inputs</p> <p (click)="setDisplayOutput(true)">Compiled Output</p> </div>
+            @if (!displayOutput) {
+                <div class="input-field">
+                    <textarea name="inputs" [(ngModel)]="input_txt"></textarea>
+                </div>
+            }
+            @if (outputFetched && displayOutput) {
+                <div class="output-testcase">
+                    {{output.output}}
+                </div>
+            }
+        </div>
+    }
+
+</div>
+</div>

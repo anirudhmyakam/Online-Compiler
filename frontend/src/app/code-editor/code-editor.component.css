@@ -1,0 +1,132 @@
+.code-ide {
+  width: 60vw;
+  height: 90vh;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ide-div{
+  display: inline-block;
+
+}
+
+.terminal{
+  display: inline-block;
+  width: 40vw;
+  height: 90vh;
+  /* padding-top: 10px; */
+  position: relative;
+  top: 5%;
+}
+
+.whole-ide{
+  display: flex;
+}
+
+.top-bar{
+  height: 8vh;
+}
+
+.language{
+  width: 120px;
+  height: 30px;
+  border-radius: 4px;
+  /* background-color: rgba(224, 163, 247, 0.896); */
+  font-size: 18px;
+  padding-left: 15px;
+
+  position: relative;
+  left: 5%;
+  /* color: white; */
+}
+
+.filename{
+    font-size: 20px;
+    height: 10hv;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    position: relative;
+    left: 12%;
+    width:150px;
+}
+
+.terminal-options{
+  height: 30px;
+}
+
+.terminal-options p{
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 35px 0 35px;
+  cursor: pointer;
+}
+
+
+.terminal-options p:hover{
+  color: rgba(30, 202, 0, 0.893);
+}
+
+.test-case{
+  padding-top: 25px;
+}
+
+.test-case-switch p{
+  display: inline-block;
+  font-size: 20px;
+  margin: 5px 35px 5px 35px;
+  cursor: pointer;
+
+  /* border-bottom: 3px solid black; */
+}
+.test-case-switch p:hover{
+
+  color: rgba(30, 202, 0, 0.893);
+  border-bottom: 3px solid black;
+}
+
+.input-field{
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+.input-field textarea{
+  width: 15vw;
+  height: 30vh;
+  border-radius: 5px;
+  background-color: aliceblue;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.output-testcase{
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  background-color: rgb(43, 43, 43);
+  color: white;
+  height: 40vh;
+}
+
+.run-button{
+  position: relative;
+  left: 25%;
+  width: 80px;
+  height: 5vh;
+  background-color: rgba(30, 202, 0, 0.893);
+  border-radius: 5px;
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.run-button:active{
+  left: 25.2%;
+  top: 2px;
+}

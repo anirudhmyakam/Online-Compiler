@@ -1,0 +1,4 @@
+<div class="container">
+  <pre #terminalRef class="terminal"></pre>
+  <div class="command"><input [(ngModel)]="command" name="command" (keydown.enter)="sendCommand()" type="text" placeholder="input and enter" class="form-control mt-2"></div>
+</div>

@@ -1,0 +1,23 @@
+.terminal{
+    background-color: rgba(42, 42, 42, 0.937);
+    color: whitesmoke;
+    width: 40vw;
+    height: 60vh;
+    overflow: auto;
+    padding-left: 5px;
+    padding-top: 15px;
+}
+
+.command input{
+    background-color: transparent;
+    font-size: 20px;
+    height: 10hv;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.command::placeholder{
+    color: black;
+    font-size: 25px;
+}
